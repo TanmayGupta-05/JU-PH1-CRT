@@ -10,3 +10,22 @@ int main(){
     cout<<farenheit<<endl;
     return 0;
 }
+
+
+//GLOBAL VS LOCAL VARIABLE
+#include<iostream>
+using namespace std;
+
+//GLOBAL
+int globalVar = 100;
+
+int main(){
+    int userInput;
+    float result;
+    
+    cin>>userInput;
+    result =  (double)globalVar/userInput;
+    
+    cout<<result<<endl;
+    return 0;
+}
