@@ -125,3 +125,26 @@ int main(){
     
     return 0;
 }
+
+
+// login credential program
+#include<iostream>
+using namespace std;
+
+int main(){
+    const int userID = 1234;
+    const int password = 0000;
+    
+    int inputID, inputPassword;
+    cout<<"enter you id:";
+    cin>> inputID;
+    cout<<"enter your password:";
+    cin>> inputPassword;
+    
+    bool isGranted = (userID == inputID) && (password == inputPassword);
+    cout << "access Granted " << isGranted << endl;
+    cout << "access Denied " << !isGranted << endl;
+
+    return 0;
+}
+
