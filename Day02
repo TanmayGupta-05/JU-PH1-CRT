@@ -119,3 +119,30 @@ int main()
    cout<<sum;
    return 0;
 }
+
+//problem 6 -- Smart home light system
+//adjust the brigntness of light 0 at daytime 10 at night and if it detects motion 100%
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   string dayOrNight;
+   bool motionDetected;
+   
+   cout <<"is it day or night: ";
+   cin >> dayOrNight;
+   cout <<"is motion detected?(1 for yes, 0 for no) ";
+   cin >> motionDetected;
+   
+   if(dayOrNight == "Night" || dayOrNight == "night"){
+       if(motionDetected){
+           cout <<"Turn on the LED with 100% brightness..";
+       }else{
+           cout << "Turn on the LED light with 10% of brightness";
+       }
+   }else{
+       cout << "Turn off the light...";
+   }
+   return 0;
+}
