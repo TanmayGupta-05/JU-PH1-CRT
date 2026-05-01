@@ -58,3 +58,21 @@ int main()
    return 0;
    
 }
+
+
+//problem 3 -- Ternary operator
+//find the greater number among two
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   int a, b;
+   int max_Num;
+   
+   cin>> a>> b;
+   //Ternary operator
+   max_Num = (a>b)? a:b;
+   cout<< max_Num;
+   return 0;
+}
