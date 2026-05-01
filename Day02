@@ -60,7 +60,7 @@ int main()
 }
 
 
-//problem 3 -- Ternary operator
+//problem 4 -- Ternary operator
 //find the greater number among two
 
 #include <iostream>
@@ -74,5 +74,26 @@ int main()
    //Ternary operator
    max_Num = (a>b)? a:b;
    cout<< max_Num;
+   return 0;
+}
+
+
+//problem 5 -- Continue statement
+//print 1-n and avoid those numbers whoch are not divisible by 3
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   int n;
+   cin>>n;
+   
+   for(int i =1; i<=n; i++){
+       if(i%3==0){
+           continue;
+       }
+       cout << i << " ";
+   }
+   cout << "\n";
    return 0;
 }
