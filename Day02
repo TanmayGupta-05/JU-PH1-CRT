@@ -12,3 +12,21 @@ int main()
   return 0;
    
 }
+
+//problem 2 -- if-else condition
+//to verify the eligible voting age
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   int age;
+  cin >> age;
+  if(age>=18){
+      cout << "you are eligible to vote"; 
+  }else{
+      cout<< "you are ineligible";
+  }
+  return 0;
+   
+}
