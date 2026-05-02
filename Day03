@@ -110,3 +110,50 @@ int main(){
     }
     return 0;
 }
+
+
+//problem 9 -- prime number or not
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout << "enter the number to check for prime: ";
+    cin >> n;
+    bool isPrime = true;
+    if(n<2){
+        isPrime = false;
+    }else{
+        for(int i =2; i<n; i++){
+            if(n%i==0){
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    if(isPrime){
+        cout << "It is a prime number";
+    }else{
+        cout<< "It is not a prime number";
+    }
+    return 0;
+}
+
+//problem 10 -- Smartphone unlock
+//try to unlock the phone until we get the cocrrect password
+#include <iostream>
+using namespace std;
+
+int main(){
+    int password;
+    
+    do{
+        cout<< "enter the password...";
+        cin >> password;
+    } while(password != 1234);
+    
+    cout << "Phone unlocked";
+    return 0;
+}
+
+
