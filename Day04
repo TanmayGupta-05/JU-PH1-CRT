@@ -12,6 +12,8 @@ int main()
     return 0;
 }
 
+----------------------------------------------------------------------------------------------------------------------
+
 //Problem 2 - print "*" pattern, 10 number of times
 #include <iostream>
 using namespace std;
@@ -26,6 +28,8 @@ int main()
     return 0;
 }
 
+----------------------------------------------------------------------------------------------------------------------
+
 //Problem 3 -- print right angled triangle using star pattern
 #include <iostream>
 using namespace std;
@@ -39,3 +43,95 @@ int main()
     }
     return 0;
 }
+
+----------------------------------------------------------------------------------------------------------------------
+
+//Problem 4 -- print right angled triangle using star pattern
+//     *
+//    **
+//   ***
+//  ****
+// *****
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n = 6;
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j<= n-i; j++) {
+			cout<<" ";
+		}
+		for(int j = 1; j<=i; j++){
+		    cout<< "*";
+		}
+		cout << "\n";
+	}
+	return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------
+//Problem 5 -- print right shifted inverted right angled triangle using star pattern
+// *****
+//  ****
+//   ***
+//    **
+//     *
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n = 6;
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j<i; j++) {
+			cout<<" ";
+		}
+		for(int j = 1; j<=n-i+1; j++){
+		    cout<< "*";
+		}
+		cout << "\n";
+	}
+	return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------
+//Problem 6 -- print inverted right angled triangle using star pattern
+// *****
+// ****
+// ***
+// **
+// *
+#include <iostream>
+using namespace std;
+int main()
+{
+    for(int i = 5; i >= 1; i--){
+        for(int j = 1; j<= i; j++){
+            cout<<"* ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+
+//Problem 7 -- print a rectangle using star pattern
+#include <iostream>
+using namespace std;
+int main()
+{
+    int row, col;
+    cout << "enter number of rows: ";
+    cin>> row;
+    cout<< "Enter number of cols: ";
+    cin >> col;
+    
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <=col; j++){
+            cout << "* ";
+        }
+        cout << "\n";
+    }
+    
+}
+
+----------------------------------------------------------------------------------------------------------------------
