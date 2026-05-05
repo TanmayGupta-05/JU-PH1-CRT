@@ -1,0 +1,98 @@
+//FUNCTIONS
+
+//Problem 1- Function declaration and initialization
+
+#include <iostream>
+using namespace std;
+
+void printMessage(){
+    cout << "Hi we are learning functions...";
+}
+
+int main(){
+    printMessage();
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+
+
+//Problem 2- function with argument and return type 
+
+#include <iostream>
+using namespace std;
+
+int area(int a, int b){
+    return a*b;
+}
+
+
+int main(){
+    int length = 10;
+    int width = 5;
+    int areaOfRect = area(length, width);
+    cout << areaOfRect;
+    
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+
+//Problem 3 -- Types of Functions
+// 3.1 -- No argument and no return type
+
+#include <iostream>
+using namespace std;
+
+void DoorBell(){
+    cout << "Ting Tong...Yo Door linngin..";
+}
+
+
+int main(){
+    DoorBell();
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+// 3.2 -- Argument and no return type
+
+#include <iostream>
+using namespace std;
+
+void sendText(string message){
+    cout << message;
+}
+
+int main(){
+    sendText("BJP Won.. Jai MODI");
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+// 3.3 -- No Argument and return type
+
+#include <iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+}
+
+int main(){
+    cout << ticketNumber();
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+// 3.4 -- Argument and return type
+
+#include <iostream>
+using namespace std;
+
+int currencyConversion(int amountInINR){
+    return amountInINR/100;
+}
+
+int main(){
+    cout << currencyConversion(100);
+    return 0;
+}
