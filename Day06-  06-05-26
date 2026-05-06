@@ -133,3 +133,20 @@ int main(){
     s2.introduce();
     return 0;
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Program 7 -- ACCESS MODIFIERS
+//7.1 -- PUBLIC
+
+#include <iostream>
+using namespace std;
+class pubicPark{
+    public:
+    void enter(){
+        cout << "Anyone can enter in the park";
+    }
+};
+int main(){
+    pubicPark p;
+    p.enter();
+}
+   
