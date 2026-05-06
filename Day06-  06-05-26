@@ -106,3 +106,30 @@ int main(){
     setTemp("ECO")  ; //set temp to 24
     setTemp("TURBO")   ; //set temp to 18
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//CLASSES AND OBJECTS
+
+#include <iostream>
+using namespace std;
+class Student{
+    public:
+    string name;
+    int age;
+    
+    void introduce(){
+        cout << "\nThe name is: " << name << " \nhis age is: " << age;
+    }
+};
+
+int main(){
+    Student s1, s2;
+    s1.name = "Tanmay";
+    s1.age = 21;
+    
+    s2.name = "Aman";
+    s2.age = 20;
+    s1.introduce();
+    s2.introduce();
+    return 0;
+}
