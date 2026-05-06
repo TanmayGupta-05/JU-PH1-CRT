@@ -1,0 +1,39 @@
+//Problem 1 --
+//Swapping the values of two variables using pointers with swap functio 
+#include <iostream>
+using namespace std;\
+void swapNumber(int* x, int* y){
+    
+    //swap
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main()
+{
+    int a;
+    int b;
+    cin>>a;
+    cin>>b;
+    
+    swapNumber(&a, &b);
+    cout << a << " " << b;
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Problem 2 --
+//Defaault arguments
+#include <iostream>
+using namespace std;\
+
+int area(int a, int b = 5){
+    return a*b;
+}
+int main(){
+    cout << area(10);
+    cout << area(10, 3); //passes user value if defined in main otherwise default
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
