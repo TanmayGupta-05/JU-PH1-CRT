@@ -62,3 +62,47 @@ int main(){
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//PRACTICE PROBLEMS
+//Problem --4
+
+#include <iostream>
+using namespace std;
+
+int coffeePrice(int amount, int price){
+    return amount*price;
+}
+int main(){
+    int n;
+    cout << "enter the number of cups of coffee you want: ";
+    cin>> n;
+    cout << coffeePrice(49, n);
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//PRACTICE PROBLEMS
+//Problem -5
+//Smart AC remote- FUnction overloadinng, Default Args
+
+#include <iostream>
+using namespace std;
+
+void setTemp(int temp = 22){
+    cout << "temperature set to " << temp << "°C \n";
+}
+void setTemp(double temp){
+    cout << "temperature set to " << temp << "°C \n";
+}
+
+void setTemp(string mode){
+    if(mode == "ECO"){
+        cout << "Temperaature set to 24°C \n";
+    }else if(mode == "TURBO"){
+        cout << "Temperature set to 18°C";
+    }
+}
+int main(){
+    setTemp() ; //default value -- 22
+    setTemp(20.5); //manually setting the temp
+    setTemp("ECO")  ; //set temp to 24
+    setTemp("TURBO")   ; //set temp to 18
+}
