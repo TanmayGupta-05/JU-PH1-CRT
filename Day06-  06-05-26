@@ -37,3 +37,28 @@ int main(){
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//Problem 3--
+//call by value and call by reference
+//call by value -- photocopy
+//call by reference -- original copy(address)
+
+#include <iostream>
+using namespace std;
+
+void updateByValue(int a){
+    a = 500;
+}
+
+void updateByReference(int &a){
+    a = 500;
+}
+int main(){
+    int original = 100;
+    
+    updateByValue(original);
+    cout << original << "\n";
+    updateByReference(original);
+    cout << original;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
