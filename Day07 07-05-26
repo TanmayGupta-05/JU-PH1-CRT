@@ -89,3 +89,68 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//Problem 4 -- Constructors
+// Types -- 4.1 -- default Constructor
+//          4.2 -- Parameterised Constructor
+//          4.3 -- Copy Constructor
+// Default constructor
+
+#include <iostream>
+using namespace std;
+
+class wifiConnection {
+public:
+    string networkName;
+    string password;
+    
+    //Constructor
+    wifiConnection(){
+        networkName = "hairyNIggaBalls365";
+        password = "JAI MODI";
+    }
+public:
+void showDetails(){
+    cout << "Network name is:" << networkName << "\nThe password is: "<< password;
+    }    
+};
+
+
+int main()
+{
+    wifiConnection obj1;
+    
+    obj1.showDetails();
+    
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Problem 4 -- Constructors
+// Types -- 4.1 -- default Constructor
+//          4.2 -- Parameterised Constructor
+//          4.3 -- Copy Constructor
+// PARAMETERISED CONSTRUCTOR
+
+#include <iostream>
+using namespace std;
+
+class Student{
+public:
+    string name;
+    int ID;
+    
+    // PARAMETERISED CONSTRUCTOR
+    Student(string studentName, int studentID){
+        name = studentName;
+        ID = studentID;
+    }
+public: 
+void displayDetails(){
+    cout << name << ID;
+}
+};
+
+
+int main()
+{
+    Student s1("Tanmay, ", 101);
+    s1.displayDetails();
+}
