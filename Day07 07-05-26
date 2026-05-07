@@ -154,3 +154,43 @@ int main()
     Student s1("Tanmay, ", 101);
     s1.displayDetails();
 }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Problem 5 -- OOPS
+// PILLAR OF OOPS
+// ENCAPSULATION -- Binding the data into a single unit(function, data, var, methods)
+//into a single unit called class and making some restrictions on this classs members
+// - Data security
+// - Controlled access over my data
+// - Validation before acecessing the data
+// - code maintainability
+
+#include <iostream>
+using namespace std;
+class bankAccount{
+    private:
+    int balance;
+    
+    public:
+    void setBalance(int amount){
+        if(amount > 0){
+            balance = amount;
+        }else{
+            cout << "Go earn something Nigga...xD";
+        }
+    }
+    
+    public:
+    int getBalance(){
+        return balance;
+       
+    }
+};
+
+int main(){
+    bankAccount obj1;
+    obj1.setBalance(22);
+    cout << obj1.getBalance();
+    
+    return 0;
+}
