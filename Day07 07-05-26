@@ -1,0 +1,91 @@
+//Problem 1 -- Access Specifier
+//7.2 private
+
+#include <iostream>
+using namespace std;
+
+class bankAccount{
+    
+    private:
+    int balance = 22;
+    
+    
+    public:
+     void showBalance(){
+         cout << "Balance in your bank account is: " << balance;
+     }
+};
+int main()
+{
+    bankAccount myAccount;
+    myAccount.showBalance();
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Problem 2 -- Access Specifier
+//7.3 protected
+
+#include <iostream>
+using namespace std;
+
+class Parent{
+    protected:
+    int secretCode = 6969;  
+};
+
+class Child : public Parent{
+    public:
+    void accessOfSecretCode(){
+        cout << "Secret code of the locker is: " << secretCode;
+    }
+};
+
+int main()
+{
+    Child obj1;
+    obj1.accessOfSecretCode();
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Problem 3 -- Access Specifier
+//Use all the access specifiers in one program
+
+#include <iostream>
+using namespace std;
+
+class Bank{
+    public:
+    string name = "LAXMI CHIT FUND \n"; 
+    void showBalance(){
+        cout << "Your balance is: " << balance;
+    }
+    
+    private: 
+    int balance = 22;
+    
+    protected:
+    int pin = 2048;
+};
+
+class Child : public Bank{
+    public:
+    void accessOfPin(){
+        cout << "\nYour Account Pin is: " << pin;
+    }
+};
+
+
+
+int main()
+{
+    Bank b;
+    cout << b.name;
+    b.showBalance();
+    Child c;
+    c.accessOfPin();
+    
+    
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
