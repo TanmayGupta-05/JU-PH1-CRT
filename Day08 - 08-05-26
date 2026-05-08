@@ -172,3 +172,91 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//Problem -- 2
+//POLYMORPHISM
+//One name Many forms
+// Same function behaves differently depending upon the type of the object called
+//Two types -- 
+// (1) -- compiletime polymorphism -- function overloading -- static
+// resolved at compile time
+// function overloads -- same function name diff parameters
+// faster execution
+
+// (2) -- Run time polymorphism -- function overriding -- Dynamic
+// resolved at run time
+// Function runtime -- same function name, same parameters but diff classs
+// ALways uses a virtual keyword in the base class 
+//achieveing through concept of inheritance
+
+
+//Types of polymorphism -- 2.1 
+//function overloading
+
+#include <iostream>
+using namespace std;
+
+class Multiply{
+    public:
+    int multiply(){
+        cout << "you have entered no numbers to multiply";
+        return 0;
+    }
+    
+    double multiply(double a, double b){
+        return a*b;
+    }
+    
+    int multiply(int a, int b, int c){
+        return a*b*c;
+    }
+};
+
+int main()
+{
+    Multiply mul;
+    
+    cout << mul.multiply() << "\n";
+    
+    cout << mul.multiply(5.4, 6.9) << "\n";
+    
+    cout << mul.multiply(5, 4, 3);
+    
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Types of polymorphism -- 2.2 
+//function overriding
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+    public:
+    virtual void sound(){
+        cout << "Animal makes sound\n";
+    }
+};
+
+class Dog : public Animal{
+    public:
+    void sound() override {
+        cout << "Dog is barking\n";
+    }
+};
+
+class Cat : public Animal{
+    public:
+    void sound() override {
+        cout << "Cat says meowwww..\n";
+    }
+};
+
+int main()
+{
+    Dog dawg;
+    Cat kitler;
+    kitler.sound();
+    dawg.sound();
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
