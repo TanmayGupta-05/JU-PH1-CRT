@@ -1,0 +1,174 @@
+//INHERITANCE
+//TYPES -- 1.1 SINGLE INHERITANCE
+//PROBLEM -- 1 
+
+#include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    void start(){
+        cout << "vehicle starts" << "\n";
+    }
+};
+
+class car : public Vehicle{
+    public:
+    void drive(){
+        cout << "car is running\n";
+    }
+};
+
+int main()
+{
+    car obj1;
+    obj1.drive();
+    obj1.start();
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//INHERITANCE
+//PROBLEM -- 1 
+//TYPES -- 1.2 MULTI LEVEL INHERITANCE
+
+#include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    void start(){
+        cout << "vehicle starts" << "\n";
+    }
+};
+
+class car : public Vehicle{
+    public:
+    void drive(){
+        cout << "car is running\n";
+    }
+};
+
+class honk : public car{
+    public:
+    void hoinkHoink(){
+        cout << "car is hoinking lol....\n";
+    }
+};
+
+int main()
+{
+    honk obj1;
+    obj1.drive();
+    obj1.start();
+    obj1.hoinkHoink();
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//INHERITANCE
+//PROBLEM -- 1 
+//TYPES -- 1.3 HIERARCHIAL INHERITANCE
+
+#include <iostream>
+using namespace std;
+
+class Vehicle{
+    public:
+    void start(){
+        cout << "vehicle starts" << "\n";
+    }
+};
+
+class car : public Vehicle{
+    public:
+    void drive(){
+        cout << "car is running\n";
+    }
+};
+
+class bike : public Vehicle{
+    public:
+    void drive(){
+        cout << "bike is running\n";
+    }
+};
+
+int main()
+{
+    car obj1;
+    obj1.start();
+    obj1.drive();
+    bike obj2;
+    obj2.start();
+    obj2.drive();
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//INHERITANCE
+//PROBLEM -- 1 
+//TYPES -- 1.4 MULTIPLE INHERITANCE
+
+#include <iostream>
+using namespace std;
+
+class Parent1{
+    public:
+    void slap(){
+        cout << "Mom beating yo ass\n";
+    }
+};
+
+class Parent2{
+    public:
+    void slap(){
+        cout << "Dad kickin yo ass\n";
+    }
+};
+
+class child : public Parent1, public Parent2{
+    
+};
+
+int main()
+{
+    child obj1;
+    obj1.Parent1::slap();
+    obj1.Parent2::slap(); //to avoid ambiguity we need to specify which parent to call
+    
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//INHERITANCE
+//PROBLEM -- 1 
+//TYPES -- 1.5 HYBRID INHERITANCE
+
+#include <iostream>
+using namespace std;
+
+class A{
+    public:
+    void print(){
+        cout << "BJP wons\n";
+    }
+};
+
+class B :virtual public A{
+    //no logik
+};
+
+class C : virtual public A{
+    //no logik
+};
+
+class D : public B, public C{
+    //no logik
+};
+
+
+int main()
+{
+    D obj1;
+    obj1.print();
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
