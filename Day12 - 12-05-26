@@ -1,0 +1,63 @@
+BUBBLE SORT
+
+class Solution {
+    public int[] bubbleSort(int[] nums) {
+        int n = nums.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        }
+
+        return nums;
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+BINARY SEARCH
+public class Main {
+
+    static int binarySearch(int arr[], int target) {
+
+        int low = 0;
+        int high = arr.length - 1;
+
+        while(low <= high) {
+
+            int mid = low + (high - low) / 2;
+
+            if(arr[mid] == target) {
+                return mid;
+            }
+
+            else if(target < arr[mid]) {
+                high = mid - 1;
+            }
+
+            else {
+                low = mid + 1;
+            }
+        }
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int arr[] = {10, 20, 30, 40, 50, 60, 70};
+        int target = 50;
+
+        int result = binarySearch(arr, target);
+
+        if(result != -1)
+            System.out.println("Element found at index: " + result);
+        else
+            System.out.println("Element not found");
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
