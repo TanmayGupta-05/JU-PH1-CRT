@@ -120,3 +120,47 @@ int main(){
     return 0;
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FIBONACCI SERIES
+
+#include <iostream>
+using namespace std;
+
+int fib(int n){
+    if(n <= 1){
+        return n;
+    }
+    return fib(n-1) + fib(n-2);
+}
+
+int main(){
+    int n = 10;
+    cout << "Fibonacci of the number is: " << fib(n);
+    return 0;
+    
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// PRINT BINARY STRING WITHOUT CONSECUTIVE 1'S
+
+#include <iostream>
+using namespace std;
+
+void printBinary(int n, string s){
+    if(s.length() == n){
+        cout << s;
+        return;
+    }
+    printBinary(n, s + "0");
+    
+    if(s.empty() || s[s.length() -1] != '1'){
+        printBinary(n, s + "1");
+    }
+}
+
+int main()
+{
+    int n = 5;
+    printBinary(n, "");
+    return 0;
+}
