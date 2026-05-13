@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int noOfWays(int n){
+    if(n<4){
+        return 1;
+    }
+    if(n == 4){
+        return 2;
+    }
+    return noOfWays(n-1) + noOfWays(n-4);
+}
+
+int main(){
+
+    int n;
+
+    cout << "Enter n: ";
+    cin >> n;
+
+    cout << "Number of ways = " << noOfWays(n);
+
+    return 0;
+}
