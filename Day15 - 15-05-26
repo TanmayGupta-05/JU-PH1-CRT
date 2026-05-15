@@ -1,0 +1,77 @@
+//STACK AND ITS FUNCTIONS
+
+#include <iostream>
+#include <stack>
+
+using namespace std;
+int main()
+{
+    int arr[] = {10, 20, 30, 40, 50};
+    int n = 5;
+    
+    stack<int> st;
+    //java -- Stack<Integer> st = new Stack<>();
+    
+    //PUSH 
+    for(int i = 0; i<n; i++){
+        st.push(arr[i]);
+        
+    }
+    
+    //POP
+    for(int i = 0; i<n; i++){
+        arr[i] = st.top();
+        st.pop();
+    }
+    
+    cout << "Reversed array" << "\n";
+    
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------
+
+//LEETCODE 344 USING STACK
+class Solution {
+    public void reverseString(char[] s) {
+        Stack<Character> st = new Stack<>();
+
+        for(int i = 0; i< s.length; i++){
+            st.push(s[i]);
+        }
+
+        for(int i = 0; i<s.length; i++ ){
+            s[i] = st.pop();
+        }
+
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+class Solution {
+    
+    public boolean isValid(String s) {
+        Stack<Character> st = new Stack<>();
+        for(int i = 0; i<s.length(); i++){
+        char ch = s.charAt(i);
+        if(ch == '(' || ch == '[' || ch == '{'){
+            st.push(ch);
+        }
+        else{
+            if(st.isEmpty()){
+                return false;
+            }
+            char top = st.peek();
+
+            if((ch == ')' && top == '(') || (ch == ']' && top == '[') || (ch == '}' && top == '{')){
+                st.pop();
+            }
+            else{
+                return false;
+            }
+        }
+        }
+    return st.isEmpty();
+    }
+}
